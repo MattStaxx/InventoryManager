@@ -8,13 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import matt.ReactiveSpring.entities.Car;
 import matt.ReactiveSpring.entities.Vehicle;
+import matt.ReactiveSpring.repositories.CarRepository;
 import matt.ReactiveSpring.repositories.VehicleRepository;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/")
 public class HomeController {
+
+	@Autowired
+	private CarRepository carRepo;
 	
 	@Autowired
 	private VehicleRepository veRepo;
@@ -27,8 +32,8 @@ public class HomeController {
 	}
 
 	@GetMapping(value="/vehicles")
-	public Iterable<Vehicle> getAllVehicles() {
+	public Iterable<Car> getAllVehicles() {
 		log.info("Getting all vehicle...");;
-		return veRepo.findAll();
+		return carRepo.findAll();
 	}
 }

@@ -2,14 +2,14 @@ package matt.ReactiveSpring.entities;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 import lombok.Data;
 
-@Entity
+@MappedSuperclass
 @Data
 public class Vehicle {
 
@@ -23,9 +23,10 @@ public class Vehicle {
 	private BigDecimal price;
 	private enum Type { AIR, LAND, SPACE, WATER }
 
-	public Vehicle() {}
+//	public Vehicle() {}
 	
-	public Vehicle(String color, int crew, int passengers, String name, int price) {
-		// TODO Auto-generated constructor stub
+	public Vehicle(String color, int crew, int passengers, String name, BigDecimal price) {
+		
+		
 	}
 }
