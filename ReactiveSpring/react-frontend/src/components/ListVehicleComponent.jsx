@@ -28,6 +28,7 @@ class ListVehicleComponent extends Component {
                     <table className='table table-striped table-bordered'>
                         <thead>
                             <tr>
+                                <th>Vehicle Type</th>
                                 <th>Vehicle Name</th>
                                 <th>Vehicle Color</th>
                                 <th>Crew Size</th>
@@ -40,6 +41,7 @@ class ListVehicleComponent extends Component {
                                 this.state.vehicles.map(
                                     vehicle =>
                                     <tr key = {vehicle.id}>
+                                        <td>{vehicle.type}</td>
                                         <td>{vehicle.name}</td>
                                         <td>{vehicle.color}</td>
                                         <td>{vehicle.crew}</td>

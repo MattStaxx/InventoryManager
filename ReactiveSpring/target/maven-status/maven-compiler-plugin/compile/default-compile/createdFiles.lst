@@ -1,5 +1,5 @@
 matt\ReactiveSpring\ReactiveSpringApplication.class
-matt\ReactiveSpring\controllers\HomeController.class
 matt\ReactiveSpring\entities\Vehicle$Type.class
 matt\ReactiveSpring\repositories\VehicleRepository.class
+matt\ReactiveSpring\controllers\HomeController.class
 matt\ReactiveSpring\entities\Vehicle.class

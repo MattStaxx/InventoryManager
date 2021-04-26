@@ -13,18 +13,20 @@ import lombok.Data;
 @Data
 public class Car extends Vehicle {
 
-	//TODO: Add view representation for Car entity in front-ends 
+	//TODO: Add view representation for Car entity in front-end 
 	
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String engineSize;
 	private int numWheels;
 	private int doors;
 	
-	public Car(String color, int crew, int passengers, String name, BigDecimal price, String engineSize, int numWheels, int doors) {
-		super(color, crew, passengers, name, price);
+	public Car() {}
+	
+	public Car(Type type, String color, int crew, int passengers, String name, BigDecimal price, String engineSize, int numWheels, int doors) {
+		super(type, color, crew, passengers, name, price);
 		this.engineSize = engineSize;
 		this.numWheels = numWheels;
 		this.doors = doors;

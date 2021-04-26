@@ -32,8 +32,8 @@ public class HomeController {
 	}
 
 	@GetMapping(value="/vehicles")
-	public Iterable<Car> getAllVehicles() {
+	public Iterable<Vehicle> getAllVehicles() {
 		log.info("Getting all vehicle...");;
-		return carRepo.findAll();
+		return veRepo.findAll();
 	}
 }
