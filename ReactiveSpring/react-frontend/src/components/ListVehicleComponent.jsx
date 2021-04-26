@@ -33,6 +33,9 @@ class ListVehicleComponent extends Component {
                                 <th>Vehicle Color</th>
                                 <th>Crew Size</th>
                                 <th>Passenger Cap.</th>
+                                <th>Engine Displacement</th>
+                                <th>Wheels</th>
+                                <th>Doors</th>
                                 <th>Price</th>
                             </tr>
                         </thead>
@@ -46,6 +49,9 @@ class ListVehicleComponent extends Component {
                                         <td>{vehicle.color}</td>
                                         <td>{vehicle.crew}</td>
                                         <td>{vehicle.passengers}</td>
+                                        <td>{vehicle.engineSize}</td>
+                                        <td>{vehicle.numWheels}</td>
+                                        <td>{vehicle.doors}</td>
                                         <td>{vehicle.price}</td>
                                     </tr>
                                 )
